@@ -1,11 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Select2 from 'react-select2-wrapper';
+import 'react-select2-wrapper/css/select2.css';
 
-export default class Seach extends Component {
-  render() {
-    return (
-      <div>
-          Search BOX
-      </div>
-    )
+export default () => (
+  <div>
+    <Select2
+      data={['bug', 'feature', 'documents', 'discussion']}
+      options={
+    {
+      placeholder: 'search by tags',
+    }
   }
-}
+    />
+  </div>
+);
