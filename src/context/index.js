@@ -4,10 +4,17 @@ import PropTypes from 'prop-types';
 
 const ZemoContext = React.createContext();
 
+const users = [
+  { text: 'Abhishek', id: 1 },
+  { text: 'Dharani', id: 2 },
+  { text: 'Poonam', id: 3 },
+  { text: 'Salini', id: 4 },
+];
 class ZemoProvider extends React.Component {
   constructor() {
     super();
     this.state = {
+      users,
       foundCamera: 'C2',
       roomLayout: [
         {

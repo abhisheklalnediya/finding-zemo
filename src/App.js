@@ -7,6 +7,7 @@ import { ZemoProvider } from './context';
 const App = () => (
   <div className="App">
     <ZemoProvider>
+      <h2>Dhundo Zemo</h2>
       <Seach />
       <Room />
     </ZemoProvider>
