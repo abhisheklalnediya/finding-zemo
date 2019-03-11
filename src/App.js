@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Room from './roomLayout';
 import Seach from './search';
+import { ZemoProvider } from './context';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Seach />
-        <Room />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div className="App">
+    <ZemoProvider>
+      <Seach />
+      <Room />
+    </ZemoProvider>
+  </div>
+);
+
 
 export default App;
