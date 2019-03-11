@@ -9,9 +9,12 @@ const Area = ({ rooms }) => <div className="area">{rooms.map(room => <Room key={
 export default () => (
   <ZemoConsumer>
     {data => (
-      <div className="layout">
-        {data.roomLayout.map(x => <Area key={x.id} rooms={x.rooms} />)}
-      </div>
+      <React.Fragment>
+        {data.error && <h5>Not found in any location.</h5>}
+        <div className="layout">
+          {data.roomLayout.map(x => <Area key={x.id} rooms={x.rooms} />)}
+        </div>
+      </React.Fragment>
     )}
   </ZemoConsumer>
 

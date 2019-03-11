@@ -8,8 +8,17 @@ const App = () => (
   <div className="App">
     <ZemoProvider>
       <h2>Dhundo Zemo</h2>
-      <Seach />
-      <Room />
+      <div className="container">
+        <div className="section">
+          <Seach />
+          <Room />
+        </div>
+        {/* <div className="section">
+          <div className="preview">
+            <img alt="webcam" src="/dummy.jpeg" />
+          </div>
+        </div> */}
+      </div>
     </ZemoProvider>
   </div>
 );

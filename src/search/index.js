@@ -10,10 +10,11 @@ export default () => (
       <div className="selectContainer">
         <Select2
           data={data.users}
-          options={{ placeholder: 'search by tags' }}
+          options={{ placeholder: 'Search by user' }}
           className="zestSelect"
           style={{ width: '100%' }}
-          onSelect={e => console.log(e.target.value)}
+          value={data.user}
+          onSelect={e => data.getLocation(e.target.value)}
         />
       </div>
     )}

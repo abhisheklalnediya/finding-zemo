@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+.section{
+    flex-grow: 1;
+}
+.preview {
+    max-width: 45%;
+    margin: 20px;
+}
+.preview img {
+    
+    object-fit: contain;
+    
+    width: 100%;
+    max-width: 400px;
+}

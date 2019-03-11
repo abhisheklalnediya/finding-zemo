@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { setUser } from './actions';
+import { getUsers, getLocation } from './actions';
 
 const ZemoContext = React.createContext();
 
 const users = [
-  { text: 'Abhishek', id: 1 },
-  { text: 'Dharani', id: 2 },
-  { text: 'Poonam', id: 3 },
-  { text: 'Salini', id: 4 },
+  // { text: 'Abhishek', id: 1 },
+  // { text: 'Dharani', id: 2 },
+  // { text: 'Poonam', id: 3 },
+  // { text: 'Salini', id: 4 },
 ];
 class ZemoProvider extends React.Component {
   constructor() {
     super();
     this.state = {
+
       users,
-      foundCamera: 'C2',
+      // foundCamera: 'C2',
       roomLayout: [
         {
           id: 1,
@@ -61,6 +62,31 @@ class ZemoProvider extends React.Component {
         },
       ],
     };
+    this.getLocation = this.getLocation.bind(this);
+  }
+
+  componentDidMount() {
+    getUsers().then(({ data }) => {
+      // console.log(data);
+      this.setState({
+        users: data.map(d => ({ text: d.userName, id: d.userId })),
+      });
+    });
+  }
+
+  getLocation(i) {
+    this.setState({
+      user: i,
+      error: false,
+    });
+    getLocation(i).then(({ data }) => this.setState({
+      foundCamera: `C${data}`,
+    }), () => {
+      this.setState({
+        foundCamera: null,
+        error: true,
+      });
+    });
   }
 
   render() {
@@ -69,6 +95,7 @@ class ZemoProvider extends React.Component {
       <ZemoContext.Provider
         value={{
           ...this.state,
+          getLocation: this.getLocation,
         }}
       >
         {children}
