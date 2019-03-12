@@ -1,0 +1,15 @@
+span.select2-selection.select2-selection--single {
+    height: 34px;
+    padding-top: 1px;
+}
+.selectContainer {
+    max-width: 600px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}

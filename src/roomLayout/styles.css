@@ -1,0 +1,36 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 90%;
+    background: #FFF;
+}
+
+.room {
+    flex-grow: 1;
+    height: 200px;
+    background: #DDD;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #666;
+    flex-direction: column;
+}
+
+.area {
+    display: flex;
+    flex-grow: 1;
+}
+
+.here {
+    background: url(/pos.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h5 {
+    color: #ff3c3c;
+    text-align: center;
+}
