@@ -22,15 +22,15 @@ class ZemoProvider extends React.Component {
           id: 1,
           rooms: [
             {
-              name: 'Room 1',
+              name: 'Odissi',
               cameras: ['C1'],
             },
             {
-              name: 'Room 2',
+              name: 'Bharathanatyam',
               cameras: ['C2'],
             },
             {
-              name: 'Room 3',
+              name: 'Garba',
               cameras: ['C3'],
             }],
         },

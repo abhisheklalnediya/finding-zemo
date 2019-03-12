@@ -7,7 +7,10 @@ import { ZemoProvider } from './context';
 const App = () => (
   <div className="App">
     <ZemoProvider>
-      <h2>Dhundo Zemo</h2>
+      <h2>
+        <img alt="zest" src="http://staging-app.zestmoney.in/assets/images/authentication/logo.png" />
+        Dhundo Zemo
+      </h2>
       <div className="container">
         <div className="section">
           <Seach />
